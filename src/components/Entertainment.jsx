@@ -66,13 +66,26 @@ const Entertainment = () => {
                         whileInView={{ scale: 1, rotate: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, type: "spring", bounce: 0.5 }}
-                        className="inline-flex items-center gap-3 mb-4"
+                        className="flex items-center justify-center gap-3 mb-2"
                     >
                         <Youtube className="text-red-500" size={44} />
                         <h2 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-purple-500 to-pink-500">
                             YouTube
                         </h2>
                     </motion.div>
+
+                    <motion.a
+                        href="https://www.youtube.com/@Livelong_with_Amit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        initial={{ opacity: 0, y: -10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="block text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600 mb-6 hover:scale-105 transition-transform cursor-pointer"
+                    >
+                        @justchill
+                    </motion.a>
                     <motion.div
                         className="w-40 h-1.5 bg-gradient-to-r from-red-500 via-purple-500 to-pink-500 mx-auto rounded-full shadow-lg shadow-red-500/50"
                         initial={{ width: 0 }}
@@ -161,7 +174,7 @@ const Entertainment = () => {
                     className="text-center"
                 >
                     <motion.a
-                        href="https://www.youtube.com/@Livelong_with_Amit/videos"
+                        href="https://www.youtube.com/@Livelong_with_Amit"
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}

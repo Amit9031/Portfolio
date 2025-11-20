@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, Linkedin, Code, Download } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Code, Download, Instagram } from 'lucide-react';
 import profilePic from '../assets/profile.jpeg';
 
 // Preload the audio file
@@ -127,14 +127,17 @@ const Hero = () => {
                     </div>
 
                     <div className="flex gap-6 justify-center md:justify-start">
-                        <a href="https://github.com/Amit9031" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors hover:scale-110">
+                        <a href="https://github.com/Amit9031" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:scale-110 transition-all shadow-lg hover:shadow-white/20">
                             <Github size={24} />
                         </a>
-                        <a href="https://www.linkedin.com/in/amitranjans/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#0077b5] transition-colors hover:scale-110">
+                        <a href="https://www.linkedin.com/in/amitranjans/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 border border-white/10 text-[#0077b5] hover:bg-white/10 hover:scale-110 transition-all shadow-lg hover:shadow-[#0077b5]/30">
                             <Linkedin size={24} />
                         </a>
-                        <a href="https://leetcode.com/u/disOKPPQ7K/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#ffa116] transition-colors hover:scale-110">
+                        <a href="https://leetcode.com/u/disOKPPQ7K/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 border border-white/10 text-[#ffa116] hover:bg-white/10 hover:scale-110 transition-all shadow-lg hover:shadow-[#ffa116]/30">
                             <Code size={24} />
+                        </a>
+                        <a href="https://www.instagram.com/_a.mit_._/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 border border-white/10 text-[#E1306C] hover:bg-white/10 hover:scale-110 transition-all shadow-lg hover:shadow-[#E1306C]/30">
+                            <Instagram size={24} />
                         </a>
                     </div>
                 </motion.div>
