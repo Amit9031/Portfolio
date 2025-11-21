@@ -3,10 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Github, Linkedin, Code, Download, Instagram } from 'lucide-react';
 import profilePic from '../assets/profile.jpeg';
 
-// Preload the typing audio
-const typingAudio = new Audio('/typesound.mp3');
-typingAudio.volume = 0.5;
-typingAudio.loop = true;
+// Audio handled within components
 
 const Typewriter = ({ text, delay = 100, startDelay = 0, className = "" }) => {
     const [currentText, setCurrentText] = useState('');
@@ -14,28 +11,56 @@ const Typewriter = ({ text, delay = 100, startDelay = 0, className = "" }) => {
     const [started, setStarted] = useState(false);
     const [isTyping, setIsTyping] = useState(false);
 
+    // Refs for audio control and state tracking
+    const audioRef = useRef(null);
+    const isTypingRef = useRef(false);
+
+    // Initialize audio
+    useEffect(() => {
+        audioRef.current = new Audio('/typesound.mp3');
+        audioRef.current.volume = 0.5;
+        audioRef.current.loop = true;
+
+        return () => {
+            if (audioRef.current) {
+                audioRef.current.pause();
+                audioRef.current.currentTime = 0;
+            }
+        };
+    }, []);
+
+    // Keep ref in sync with state for event listeners
+    useEffect(() => {
+        isTypingRef.current = isTyping;
+    }, [isTyping]);
+
     useEffect(() => {
         const timeout = setTimeout(() => {
             setStarted(true);
             setIsTyping(true);
 
-            // Try to play audio immediately (might be blocked)
-            const playPromise = typingAudio.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(() => {
-                    // If blocked, add listeners to play on FIRST interaction
-                    const unlockAudio = () => {
-                        typingAudio.play().catch(() => { });
-                        // Remove listeners once triggered
-                        ['click', 'mousemove', 'keydown', 'touchstart'].forEach(event =>
-                            document.removeEventListener(event, unlockAudio)
-                        );
-                    };
+            // Try to play audio immediately
+            if (audioRef.current) {
+                const playPromise = audioRef.current.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {
+                        // If blocked, add listeners to play on FIRST interaction
+                        const unlockAudio = () => {
+                            // Only play if we are currently typing
+                            if (isTypingRef.current && audioRef.current) {
+                                audioRef.current.play().catch(() => { });
+                            }
+                            // Remove listeners once triggered
+                            ['click', 'mousemove', 'keydown', 'touchstart'].forEach(event =>
+                                document.removeEventListener(event, unlockAudio)
+                            );
+                        };
 
-                    ['click', 'mousemove', 'keydown', 'touchstart'].forEach(event =>
-                        document.addEventListener(event, unlockAudio)
-                    );
-                });
+                        ['click', 'mousemove', 'keydown', 'touchstart'].forEach(event =>
+                            document.addEventListener(event, unlockAudio)
+                        );
+                    });
+                }
             }
         }, startDelay);
         return () => clearTimeout(timeout);
@@ -50,18 +75,12 @@ const Typewriter = ({ text, delay = 100, startDelay = 0, className = "" }) => {
             return () => clearTimeout(timeout);
         } else if (currentIndex >= text.length) {
             setIsTyping(false);
-            typingAudio.pause();
-            typingAudio.currentTime = 0;
+            if (audioRef.current) {
+                audioRef.current.pause();
+                audioRef.current.currentTime = 0;
+            }
         }
     }, [currentIndex, delay, text, started]);
-
-    // Cleanup on unmount
-    useEffect(() => {
-        return () => {
-            typingAudio.pause();
-            typingAudio.currentTime = 0;
-        };
-    }, []);
 
     return (
         <span className={className}>
