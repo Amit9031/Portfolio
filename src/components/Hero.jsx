@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Github, Linkedin, Code, Download, Instagram } from 'lucide-react';
 import profilePic from '../assets/profile.jpeg';
 
-// Preload the audio file
+// Preload the typing audio
 const typingAudio = new Audio('/typesound.mp3');
 typingAudio.volume = 0.5;
-typingAudio.loop = true; // Loop the sound if it's shorter than the text
+typingAudio.loop = true;
 
 const Typewriter = ({ text, delay = 100, startDelay = 0, className = "" }) => {
     const [currentText, setCurrentText] = useState('');
@@ -74,8 +74,40 @@ const Typewriter = ({ text, delay = 100, startDelay = 0, className = "" }) => {
 };
 
 const Hero = () => {
+    const audioRef = useRef(null);
+
+    useEffect(() => {
+        // Attempt to play on mount
+        if (audioRef.current) {
+            audioRef.current.volume = 0.5;
+            const playPromise = audioRef.current.play();
+
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log("Autoplay prevented:", error);
+                    // Add a one-time listener to play on interaction
+                    const playOnInteraction = () => {
+                        if (audioRef.current) {
+                            audioRef.current.play().catch(e => console.error("Play failed:", e));
+                        }
+                        document.removeEventListener('click', playOnInteraction);
+                        document.removeEventListener('keydown', playOnInteraction);
+                        document.removeEventListener('touchstart', playOnInteraction);
+                    };
+
+                    document.addEventListener('click', playOnInteraction);
+                    document.addEventListener('keydown', playOnInteraction);
+                    document.addEventListener('touchstart', playOnInteraction);
+                });
+            }
+        }
+    }, []);
+
     return (
         <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+            {/* Hidden audio element */}
+            <audio ref={audioRef} src="/welsound.mp3" preload="auto" />
+
             {/* Background gradient blobs */}
             <div className="absolute top-20 left-20 w-72 h-72 bg-accent/20 rounded-full blur-3xl animate-pulse" />
             <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
