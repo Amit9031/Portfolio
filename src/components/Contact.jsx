@@ -80,7 +80,9 @@ const Contact = () => {
                             </div>
                             <p className="text-gray-400 text-sm mb-2">Email</p>
                             <a
-                                href="mailto:amitrajr7@gmail.com"
+                                href="https://mail.google.com/mail/?view=cm&fs=1&to=amitrajr7@gmail.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-white text-sm font-medium hover:text-accent transition-colors break-all"
                             >
                                 amitrajr7@gmail.com
