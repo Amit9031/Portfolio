@@ -80,10 +80,10 @@ const Contact = () => {
                             </div>
                             <p className="text-gray-400 text-sm mb-2">Email</p>
                             <a
-                                href="mailto:amit.ranjan@example.com"
+                                href="mailto:amitrajr7@gmail.com"
                                 className="text-white text-sm font-medium hover:text-accent transition-colors break-all"
                             >
-                                amit.ranjan@example.com
+                                amitrajr7@gmail.com
                             </a>
                         </div>
 
@@ -124,7 +124,7 @@ const Contact = () => {
                                 <Github size={24} />
                             </a>
                             <a
-                                href="https://linkedin.com/in/yourprofile"
+                                href="https://www.linkedin.com/in/amitranjans/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 bg-primary/50 hover:bg-accent/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-accent transition-all border border-white/5 hover:border-accent/30"
