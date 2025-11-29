@@ -204,11 +204,20 @@ const Hero = () => {
                         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                         className="relative w-64 h-64 md:w-96 md:h-96 mx-auto"
                     >
+                        {/* Rotating Gradient Ring */}
+                        <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                            className="absolute -inset-1 bg-gradient-to-r from-accent via-purple-500 to-pink-500 rounded-full opacity-75 blur-sm"
+                        />
+
+                        {/* Background Glow */}
                         <div className="absolute inset-0 bg-gradient-to-tr from-accent to-purple-500 rounded-full blur-2xl opacity-50 animate-pulse" />
+
                         <img
                             src={profilePic}
                             alt="Amit Ranjan"
-                            className="relative w-full h-full object-cover rounded-full border-4 border-white/10 shadow-2xl"
+                            className="relative w-full h-full object-cover rounded-full border-4 border-white/10 shadow-2xl transition-transform duration-500 hover:scale-110 z-10"
                         />
                     </motion.div>
                 </motion.div>

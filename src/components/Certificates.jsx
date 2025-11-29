@@ -18,6 +18,24 @@ const Certificates = () => {
         },
         {
             id: 2,
+            title: 'Soft Skills',
+            image: '/certificates/softcoursera.png',
+            issuer: 'Coursera',
+            date: '2024',
+            color: '#0056D2',
+            gradient: 'from-blue-600 via-blue-700 to-indigo-800',
+        },
+        {
+            id: 3,
+            title: 'FreeCodeCamp Certificate',
+            image: '/certificates/freecodecamp.png',
+            issuer: 'freeCodeCamp',
+            date: '2024',
+            color: '#0a0a23',
+            gradient: 'from-gray-800 via-gray-900 to-black',
+        },
+        {
+            id: 5,
             title: 'Responsive Web Design',
             image: '/certificates/certificate-1.png',
             issuer: 'freeCodeCamp',
@@ -26,7 +44,7 @@ const Certificates = () => {
             gradient: 'from-blue-500 via-blue-600 to-cyan-600',
         },
         {
-            id: 3,
+            id: 4,
             title: 'Professional Certificate 2',
             image: '/certificates/certificate-2.png',
             issuer: 'Certification Authority',
@@ -35,7 +53,7 @@ const Certificates = () => {
             gradient: 'from-purple-500 via-purple-600 to-pink-600',
         },
         {
-            id: 4,
+            id: 6,
             title: 'Professional Certificate 3',
             image: '/certificates/certificate-3.png',
             issuer: 'Certification Authority',
@@ -44,7 +62,7 @@ const Certificates = () => {
             gradient: 'from-emerald-500 via-green-600 to-teal-600',
         },
         {
-            id: 5,
+            id: 7,
             title: 'Professional Certificate 4',
             image: '/certificates/certificate-4.png',
             issuer: 'Certification Authority',
@@ -53,7 +71,7 @@ const Certificates = () => {
             gradient: 'from-amber-500 via-orange-600 to-red-600',
         },
         {
-            id: 6,
+            id: 8,
             title: 'Professional Certificate 5',
             image: '/certificates/certificate-5.png',
             issuer: 'Certification Authority',
@@ -62,7 +80,7 @@ const Certificates = () => {
             gradient: 'from-pink-500 via-rose-600 to-red-600',
         },
         {
-            id: 7,
+            id: 9,
             title: 'Professional Certificate 6',
             image: '/certificates/certificate-6.png',
             issuer: 'Certification Authority',
@@ -71,7 +89,7 @@ const Certificates = () => {
             gradient: 'from-cyan-500 via-blue-600 to-indigo-600',
         },
         {
-            id: 8,
+            id: 10,
             title: 'Professional Certificate 7',
             image: '/certificates/certificate-7.png',
             issuer: 'Certification Authority',
