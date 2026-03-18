@@ -37,10 +37,10 @@ const Projects = () => {
             icon: <Star size={24} />
         },
         {
-            title: 'Gesture Media Control',
-            desc: 'Innovative hands-free media control system using advanced hand gesture recognition via webcam.',
-            tags: ['OpenCV', 'HCI', 'Python'],
-            link: 'https://github.com/Amit9031/Gesture-Based-Media-Interaction-Control-Images-and-Videos-with-Hand-Movements-Open-cv-concept',
+            title: 'QR Entry Gate System',
+            desc: 'Real-time university gate entry recorder system for automated and seamless access management.',
+            tags: ['Java', 'Spring Boot', 'DevOps'],
+            link: 'https://github.com/Amit9031/university-entry-system',
             image: 'https://images.unsplash.com/photo-1535378620166-273708d44e4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
             color: '#F59E0B',
             gradient: 'from-amber-500 via-orange-600 to-red-600',
