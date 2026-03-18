@@ -7,11 +7,11 @@ const Projects = () => {
 
     const projects = [
         {
-            title: 'Traffic Congestion Prediction',
-            desc: 'AI-powered system predicting traffic patterns using GPS data to optimize route planning and reduce congestion.',
-            tags: ['Python', 'Machine Learning', 'GPS Data'],
-            link: 'https://github.com/Amit9031/Traffic-congestion-Predictions-using-GPS',
-            image: 'https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+            title: 'Loan Prediction Analysis',
+            desc: 'Machine learning model for analyzing financial data and predicting loan approval probabilities with high accuracy.',
+            tags: ['Python', 'Machine Learning', 'Data Analysis'],
+            link: 'https://github.com/Amit9031/Loan-Predictive-Analytics',
+            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
             color: '#3B82F6',
             gradient: 'from-blue-500 via-blue-600 to-cyan-600',
             icon: <Rocket size={24} />
