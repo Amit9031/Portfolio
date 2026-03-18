@@ -17,11 +17,11 @@ const Projects = () => {
             icon: <Rocket size={24} />
         },
         {
-            title: 'Facial Expression Detection',
-            desc: 'Real-time emotion recognition system using OpenCV that accurately maps facial expressions to emojis.',
-            tags: ['OpenCV', 'Python', 'Computer Vision'],
-            link: 'https://github.com/Amit9031/Real-time-facial-expression-detection-with-Emoji-using-Open-cv',
-            image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+            title: 'Personal Library Tracker',
+            desc: 'A comprehensive management system to track, organize, and manage personal book collections and reading progress.',
+            tags: ['Full Stack', 'Database', 'Web App'],
+            link: 'https://github.com/Amit9031/Personal-Library-Tracker-',
+            image: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
             color: '#8B5CF6',
             gradient: 'from-purple-500 via-purple-600 to-pink-600',
             icon: <Sparkles size={24} />
