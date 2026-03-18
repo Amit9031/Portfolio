@@ -11,7 +11,7 @@ const Education = () => {
             field: 'Computer Science and Engineering',
             location: 'Phagwara, Punjab',
             duration: "Since Aug' 2023",
-            score: 'CGPA: 8.13',
+            score: 'CGPA: 8.29',
             image: '/education/lpu.png',
             color: '#4F46E5',
             gradient: 'from-indigo-600 to-purple-600',
@@ -233,7 +233,7 @@ const Education = () => {
                     </div>
                     <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-xl p-6 rounded-2xl border border-white/10 text-center">
                         <TrendingUp className="mx-auto mb-3 text-purple-400" size={36} />
-                        <p className="text-3xl font-bold text-white mb-1">8.13</p>
+                        <p className="text-3xl font-bold text-white mb-1">8.29</p>
                         <p className="text-gray-400 text-sm">Current CGPA</p>
                     </div>
                     <div className="bg-gradient-to-br from-pink-600/20 to-red-600/20 backdrop-blur-xl p-6 rounded-2xl border border-white/10 text-center">
