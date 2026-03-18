@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, Linkedin, Code, Download, Instagram } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Code, Download } from 'lucide-react';
 import profilePic from '../assets/profile.jpeg';
 
 // Audio handled within components
@@ -187,9 +187,7 @@ const Hero = () => {
                         <a href="https://leetcode.com/u/disOKPPQ7K/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 border border-white/10 text-[#ffa116] hover:bg-white/10 hover:scale-110 transition-all shadow-lg hover:shadow-[#ffa116]/30">
                             <Code size={24} />
                         </a>
-                        <a href="https://www.instagram.com/_a.mit_._/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 border border-white/10 text-[#E1306C] hover:bg-white/10 hover:scale-110 transition-all shadow-lg hover:shadow-[#E1306C]/30">
-                            <Instagram size={24} />
-                        </a>
+
                     </div>
                 </motion.div>
 
