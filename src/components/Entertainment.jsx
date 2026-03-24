@@ -4,7 +4,7 @@ import { Youtube, Play, Users, Eye, ThumbsUp } from 'lucide-react';
 
 const Entertainment = () => {
     const channelStats = [
-        { icon: <Users size={24} />, label: 'Subscribers', value: '2.5K', color: '#FF0000' },
+        { icon: <Users size={24} />, label: 'Subscribers', value: '3K+', color: '#FF0000' },
         { icon: <Eye size={24} />, label: 'Total Views', value: '50K+', color: '#00FF00' },
         { icon: <ThumbsUp size={24} />, label: 'Likes', value: '50K+', color: '#0000FF' },
     ];
