@@ -96,10 +96,10 @@ const Contact = () => {
                             </div>
                             <p className="text-gray-400 text-sm mb-2">Phone</p>
                             <a
-                                href="tel:+91XXXXXXXXXX"
+                                href="tel:+918709522829"
                                 className="text-white text-sm font-medium hover:text-accent transition-colors"
                             >
-                                +91 XXXXX XXXXX
+                                +91 87095 22829
                             </a>
                         </div>
 

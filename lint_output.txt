@@ -1,0 +1,92 @@
+﻿
+> portfolio-ai@0.0.0 lint
+> eslint .
+
+
+C:\Users\Amit Ranjan\Downloads\Portfolioai\src\components\About.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\Amit Ranjan\Downloads\Portfolioai\src\components\Certificates.jsx
+  1:27  error  'useEffect' is defined but never used. Allowed unused vars must match /^[A-Z_]/u           no-unused-vars
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u              no-unused-vars
+  7:12  error  'direction' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\Amit Ranjan\Downloads\Portfolioai\src\components\Contact.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\Amit Ranjan\Downloads\Portfolioai\src\components\Education.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\Amit Ranjan\Downloads\Portfolioai\src\components\Entertainment.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\Amit Ranjan\Downloads\Portfolioai\src\components\Hero.jsx
+   2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     no-unused-vars
+  77:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  75 |             return () => clearTimeout(timeout);
+  76 |         } else if (currentIndex >= text.length) {
+> 77 |             setIsTyping(false);
+     |             ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  78 |             if (audioRef.current) {
+  79 |                 audioRef.current.pause();
+  80 |                 audioRef.current.currentTime = 0;  react-hooks/set-state-in-effect
+
+C:\Users\Amit Ranjan\Downloads\Portfolioai\src\components\Navbar.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\Amit Ranjan\Downloads\Portfolioai\src\components\Projects.jsx
+   2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            no-unused-vars
+  65:38  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  63 |                         className="absolute w-2 h-2 bg-white/20 rounded-full"
+  64 |                         style={{
+> 65 |                             left: `${Math.random() * 100}%`,
+     |                                      ^^^^^^^^^^^^^ Cannot call impure function
+  66 |                             top: `${Math.random() * 100}%`,
+  67 |                         }}
+  68 |                         animate={{  react-hooks/purity
+  66:37  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  64 |                         style={{
+  65 |                             left: `${Math.random() * 100}%`,
+> 66 |                             top: `${Math.random() * 100}%`,
+     |                                     ^^^^^^^^^^^^^ Cannot call impure function
+  67 |                         }}
+  68 |                         animate={{
+  69 |                             y: [0, -30, 0],                                     react-hooks/purity
+  74:43  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  72 |                         }}
+  73 |                         transition={{
+> 74 |                             duration: 3 + Math.random() * 2,
+     |                                           ^^^^^^^^^^^^^ Cannot call impure function
+  75 |                             repeat: Infinity,
+  76 |                             delay: Math.random() * 2,
+  77 |                         }}                                      react-hooks/purity
+  76:36  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  74 |                             duration: 3 + Math.random() * 2,
+  75 |                             repeat: Infinity,
+> 76 |                             delay: Math.random() * 2,
+     |                                    ^^^^^^^^^^^^^ Cannot call impure function
+  77 |                         }}
+  78 |                     />
+  79 |                 ))}                                                                   react-hooks/purity
+
+Γ£û 15 problems (15 errors, 0 warnings)
+

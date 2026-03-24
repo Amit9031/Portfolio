@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Github, Linkedin, Code, Download } from 'lucide-react';
-import profilePic from '../assets/profile.jpeg';
+import profilePic from '../assets/amitnew.jpeg';
 
 // Audio handled within components
 
@@ -74,6 +74,7 @@ const Typewriter = ({ text, delay = 100, startDelay = 0, className = "" }) => {
             }, delay);
             return () => clearTimeout(timeout);
         } else if (currentIndex >= text.length) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setIsTyping(false);
             if (audioRef.current) {
                 audioRef.current.pause();
@@ -140,12 +141,12 @@ const Hero = () => {
                     className="flex-1 text-center md:text-left"
                 >
                     <h2 className="text-accent font-medium text-lg mb-4 tracking-wide">HELLO, I'M</h2>
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight h-20 md:h-24">
+                    <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight min-h-[5rem] md:min-h-[6rem]">
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">
                             <Typewriter text="Amit Ranjan" delay={150} />
                         </span>
                     </h1>
-                    <div className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl leading-relaxed min-h-[100px]">
+                    <div className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl leading-relaxed min-h-[160px] md:min-h-[100px]">
                         <Typewriter
                             text="Blending Full-Stack engineering with Data Science and AI to build intelligent, visually stunning, and high-performance applications."
                             delay={50}
@@ -169,12 +170,7 @@ const Hero = () => {
                             <Download className="mr-2 h-5 w-5" />
                             Download CV
                         </a>
-                        <a
-                            href="#contact"
-                            className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 transition-all hover:scale-105 shadow-lg shadow-green-500/25"
-                        >
-                            Contact Me
-                        </a>
+
                     </div>
 
                     <div className="flex gap-6 justify-center md:justify-start">

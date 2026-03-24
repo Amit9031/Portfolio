@@ -2,6 +2,14 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Code2, Sparkles, Rocket, Star } from 'lucide-react';
 
+const particles = [...Array(20)].map((_, i) => ({
+    id: i,
+    left: `${Math.random() * 100}%`,
+    top: `${Math.random() * 100}%`,
+    duration: 3 + Math.random() * 2,
+    delay: Math.random() * 2,
+}));
+
 const Projects = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -57,13 +65,13 @@ const Projects = () => {
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-blue-500/10 rounded-full blur-3xl animate-spin-slow" />
 
                 {/* Floating Particles */}
-                {[...Array(20)].map((_, i) => (
+                {particles.map((p) => (
                     <motion.div
-                        key={i}
+                        key={p.id}
                         className="absolute w-2 h-2 bg-white/20 rounded-full"
                         style={{
-                            left: `${Math.random() * 100}%`,
-                            top: `${Math.random() * 100}%`,
+                            left: p.left,
+                            top: p.top,
                         }}
                         animate={{
                             y: [0, -30, 0],
@@ -71,9 +79,9 @@ const Projects = () => {
                             scale: [1, 1.5, 1],
                         }}
                         transition={{
-                            duration: 3 + Math.random() * 2,
+                            duration: p.duration,
                             repeat: Infinity,
-                            delay: Math.random() * 2,
+                            delay: p.delay,
                         }}
                     />
                 ))}
@@ -207,17 +215,7 @@ const Projects = () => {
                                             </a>
                                         </motion.div>
 
-                                        {/* Project Number */}
-                                        <div className="absolute bottom-4 left-4">
-                                            <motion.div
-                                                className="w-14 h-14 rounded-2xl flex items-center justify-center font-bold text-white text-2xl backdrop-blur-xl border-2 border-white/20 shadow-lg"
-                                                style={{ backgroundColor: `${project.color}60` }}
-                                                whileHover={{ rotate: 360, scale: 1.1 }}
-                                                transition={{ duration: 0.5 }}
-                                            >
-                                                {index + 1}
-                                            </motion.div>
-                                        </div>
+
                                     </div>
 
                                     {/* Content Section */}
