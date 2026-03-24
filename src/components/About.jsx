@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Palette, Terminal, Cpu, Database, Globe, Layout, Server, GitBranch, Brain, Sparkles } from 'lucide-react';
+import { Code, Palette, Terminal, Cpu, Database, Globe, Layout, Server, GitBranch, Brain, Sparkles, Coffee, FileCode, Infinity } from 'lucide-react';
 
 const About = () => {
     const skills = [
@@ -15,6 +15,9 @@ const About = () => {
         { name: 'HTML5/CSS3', icon: <Globe size={20} />, color: '#E34F26' },
         { name: 'MongoDB', icon: <Database size={20} />, color: '#47A248' },
         { name: 'Data Structures', icon: <Code size={20} />, color: '#A8B9CC' },
+        { name: 'Java', icon: <Coffee size={20} />, color: '#f89820' },
+        { name: 'C++', icon: <FileCode size={20} />, color: '#00599C' },
+        { name: 'DevOps', icon: <Infinity size={20} />, color: '#8A2BE2' },
     ];
 
     const containerVariants = {
