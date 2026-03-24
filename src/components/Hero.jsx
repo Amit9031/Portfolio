@@ -148,7 +148,7 @@ const Hero = () => {
                     </h1>
                     <div className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl leading-relaxed min-h-[160px] md:min-h-[100px]">
                         <Typewriter
-                            text="Blending Full-Stack engineering with Data Science and AI to build intelligent, visually stunning, and high-performance applications."
+                            text="Blending Data Science with Full-Stack development to build intelligent, scalable, and visually engaging high performance applications powered by AI"
                             delay={50}
                             startDelay={2000}
                         />
