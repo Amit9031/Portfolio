@@ -14,7 +14,7 @@ const Navbar = () => {
         { name: 'Certificates', href: '#certificates' },
         { name: 'Entertainment', href: '#entertainment' },
         { name: 'Contact', href: '#contact' },
-        { name: 'Resume', href: '/amit-cv-2025.docx', download: true },
+        { name: 'Resume', href: '/newcv2027.pdf', download: true },
     ];
 
     return (
@@ -30,7 +30,7 @@ const Navbar = () => {
                                 <a
                                     key={link.name}
                                     href={link.href}
-                                    download={link.download ? "Amit_Ranjan_CV.docx" : undefined}
+                                    download={link.download ? "Amit_Ranjan_CV.pdf" : undefined}
                                     className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${link.name === 'Resume'
                                         ? 'text-accent hover:text-accent/80 font-semibold'
                                         : 'text-gray-300 hover:text-accent'
@@ -64,7 +64,7 @@ const Navbar = () => {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                download={link.download ? "Amit_Ranjan_CV.docx" : undefined}
+                                download={link.download ? "Amit_Ranjan_CV.pdf" : undefined}
                                 className={`block px-3 py-2 rounded-md text-base font-medium ${link.name === 'Resume'
                                     ? 'text-accent hover:text-accent/80 font-semibold'
                                     : 'text-gray-300 hover:text-accent'
