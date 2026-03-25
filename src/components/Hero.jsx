@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, Linkedin, Code, Download } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Code, Eye } from 'lucide-react';
 import profilePic from '../assets/amitnew.jpeg';
 
 // Audio handled within components
@@ -164,11 +164,12 @@ const Hero = () => {
                         </a>
                         <a
                             href="/newcv2027.pdf"
-                            download="Amit_Ranjan_CV.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all hover:scale-105 shadow-lg shadow-purple-500/25"
                         >
-                            <Download className="mr-2 h-5 w-5" />
-                            Download CV
+                            <Eye className="mr-2 h-5 w-5" />
+                            View CV
                         </a>
 
                     </div>
